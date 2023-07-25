@@ -1,0 +1,20 @@
+main {
+  width: 100vw;
+  height: 100vh;
+  background-color: #303031;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#chooseText {
+  color: #fff;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+#cars {
+  font-size: 25px;
+  border: none;
+  border-radius: 10px;
+}

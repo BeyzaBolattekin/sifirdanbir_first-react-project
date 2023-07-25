@@ -4,28 +4,30 @@ function App() {
   const carContent = [
     {
       value: "volvo",
-      brand: "volvo",
+      brand: "Volvo",
     },
     {
       value: "fiat",
-      brand: "fiat",
+      brand: "Fiat",
     },
     {
       value: "mercedes",
-      brand: "mercedes",
+      brand: "Mercedes",
     },
     {
       value: "audi",
-      brand: "audi",
+      brand: "Audi",
     },
   ];
   return (
     <main>
       <div class="container">
-        <label id="text">Choose a car:</label>
-        <select name="cars" id="cars">
+        <label id="chooseText" class="text">
+          Choose a car:
+        </label>
+        <select id="cars">
           {carContent.map((car) => (
-            <option class="option" value={car.value}>
+            <option class="car" value={car.value}>
               {car.brand}
             </option>
           ))}

@@ -13,7 +13,7 @@ main {
   font-size: 25px;
 }
 
-#cars {
+.cars {
   font-size: 25px;
   border: none;
   border-radius: 10px;

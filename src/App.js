@@ -1,4 +1,5 @@
 import "./App.css";
+import CarItem from "./components/CarItem";
 
 function App() {
   const carContent = [
@@ -19,19 +20,19 @@ function App() {
       brand: "Audi",
     },
   ];
+
+  let carItems = [];
+  carContent.forEach((car) => {
+    carItems.push(<CarItem value={car.value} brand={car.brand}></CarItem>);
+  });
+
   return (
     <main>
       <div class="container">
         <label id="chooseText" class="text">
           Choose a car:
         </label>
-        <select id="cars">
-          {carContent.map((car) => (
-            <option class="car" value={car.value}>
-              {car.brand}
-            </option>
-          ))}
-        </select>
+        <select class="cars">{carItems}</select>
       </div>
     </main>
   );

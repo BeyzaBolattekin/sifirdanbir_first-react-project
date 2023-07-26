@@ -1,6 +1,8 @@
 import "./App.css";
 import CarItem from "./components/CarItem";
 
+const carItems = createCarItems();
+
 function createCarItems() {
   const carContent = [
     {
@@ -29,8 +31,6 @@ function createCarItems() {
 }
 
 function App() {
-  const carItems = createCarItems();
-
   return (
     <main>
       <div class="container">

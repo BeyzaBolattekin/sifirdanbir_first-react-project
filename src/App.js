@@ -1,7 +1,7 @@
 import "./App.css";
 import CarItem from "./components/CarItem";
 
-function App() {
+function createCarItems() {
   const carContent = [
     {
       value: "volvo",
@@ -21,10 +21,15 @@ function App() {
     },
   ];
 
-  let carItems = [];
-  carContent.forEach((car) => {
-    carItems.push(<CarItem value={car.value} brand={car.brand}></CarItem>);
-  });
+  const carItems = carContent.map((car) => (
+    <CarItem value={car.value} brand={car.brand}></CarItem>
+  ));
+
+  return carItems;
+}
+
+function App() {
+  const carItems = createCarItems();
 
   return (
     <main>
